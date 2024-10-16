@@ -1,5 +1,5 @@
 FROM rust:1-alpine3.20 AS builder
-ENV RUSTFLAGS="-C target-feature=-crt-static -C target-cpu=native"
+ENV RUSTFLAGS="-C target-feature=-crt-static -C target-cpu=x86-64"
 RUN apk add --no-cache musl-dev
 WORKDIR /pumpkin
 COPY . /pumpkin
